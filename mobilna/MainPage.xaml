@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NF_04_2025_01_Music_Player.MainPage"
+             Title="Odtwarzacz muzyki">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="20">
+            <Image x:Name="AlbumCover"
+                   Source="crabrave.jpg"
+                   WidthRequest="300"/>
+            <Label x:Name="SongTitle"
+                   Text="Crab Rave"
+                   FontSize="Title"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="SongAuthor"
+                   Text="Noisestorm"
+                   HorizontalOptions="Center"/>
+            <Grid ColumnDefinitions="Auto,*,Auto">
+                <Label x:Name="CurrentTime"
+                       Text="0:00"
+                       HorizontalOptions="Center"/>
+                <Slider x:Name="SongSlider"
+                        Grid.Column="1" />
+                <Label x:Name="TotalTime"
+                       Text="3:12"
+                       Grid.Column="2"
+                       HorizontalOptions="Center"/>
+            </Grid>
+            <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                <Button x:Name="BackButton"
+                        ImageSource="rewind.png"
+                        BackgroundColor="LightBlue"
+                        HorizontalOptions="Center"
+                        Clicked="OnBackButtonClicked"/>
+                <Button x:Name="PlayButton"
+                        ImageSource="play.png"
+                        BackgroundColor="LightBlue"
+                        Grid.Column="1"
+                        HorizontalOptions="Center"/>
+                <Button x:Name="NextButton"
+                        ImageSource="forward.png"
+                        BackgroundColor="LightBlue"
+                        Grid.Column="2"
+                        HorizontalOptions="Center"
+                        Clicked="OnNextButtonClicked"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
