@@ -6,6 +6,7 @@
 
     <ScrollView>
         <VerticalStackLayout
+            VerticalOptions="Center"
             Padding="30,0"
             Spacing="20">
             <Image x:Name="AlbumCover"
